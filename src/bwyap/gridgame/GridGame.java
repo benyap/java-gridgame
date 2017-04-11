@@ -13,15 +13,15 @@ public class GridGame {
 	
 	private static final int FPS_RATE = 30;
 	
-	private KeyInputController input;
-	private GridGameWindow window;
-	private GameEngineInterface engine;
-	private Thread engineThread;
+	protected KeyInputController input;
+	protected GridGameWindow window;
+	protected GameEngineInterface engine;
+	protected Thread engineThread;
 	
 	/**
 	 * Create a new GridGame object and initialize game engine and game window. 
 	 */
-	public GridGame() {		
+	public GridGame() {	
 		input = new KeyInputController();
 		window = new GridGameWindow("Game Window");
 		engine = new GridGameEngine(FPS_RATE, window);

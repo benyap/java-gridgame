@@ -1,4 +1,4 @@
-package bwyap.gridgame;
+package gridworld;
 
 /**
  * Driver class to start the grid game application.
@@ -8,7 +8,8 @@ package bwyap.gridgame;
 public class Driver {
 	
 	public static void main(String[] args) {
-		new GridGame().start();
+		// Create a GridWorld object and start the game
+		new GridWorld().start();
 	}
 	
 }
