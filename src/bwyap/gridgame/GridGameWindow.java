@@ -2,14 +2,14 @@ package bwyap.gridgame;
 
 import bwyap.gridgame.input.KeyInputController;
 import bwyap.gridgame.input.KeyInputInterface;
-import bwyap.gridgame.window.GameWindow;
+import bwyap.gridgame.render.CanvasGameWindow;
 
 /**
  * A Game window for GridGame.
  * @author bwyap
  * 
  */
-public class GridGameWindow extends GameWindow {
+public class GridGameWindow extends CanvasGameWindow {
 
 	private static final long serialVersionUID = -6717115563458854290L;
 	
@@ -51,11 +51,6 @@ public class GridGameWindow extends GameWindow {
 	
 	@Override
 	public void update(float timeElapsed) {
-		
-	}
-
-	@Override
-	public void render() {
 		
 	}
 

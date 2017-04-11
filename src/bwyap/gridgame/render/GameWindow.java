@@ -1,4 +1,4 @@
-package bwyap.gridgame.window;
+package bwyap.gridgame.render;
 
 import javax.swing.JFrame;
 
