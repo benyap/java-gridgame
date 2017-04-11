@@ -22,6 +22,8 @@ public class GridGameEngine extends FixedTimeStepGameEngine {
 	
 	@Override
 	public void update(float timeElapsed) {
+		// update the window
+		window.update(timeElapsed);
 		
 	}
 	
@@ -30,6 +32,8 @@ public class GridGameEngine extends FixedTimeStepGameEngine {
 		// update the fps in the title bar
 		window.setTitle(window.getDefaultTitle() + " (" + (int)getMeasuredfps() + " fps)");
 		
+		// render components in the window
+		window.render();
 	}
 	
 }

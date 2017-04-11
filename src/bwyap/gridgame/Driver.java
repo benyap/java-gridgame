@@ -8,7 +8,7 @@ package bwyap.gridgame;
 public class Driver {
 	
 	public static void main(String[] args) {
-		new GridGame();
+		new GridGame().start();
 	}
 	
 }
