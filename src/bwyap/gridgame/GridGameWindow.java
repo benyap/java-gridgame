@@ -3,6 +3,7 @@ package bwyap.gridgame;
 import bwyap.gridgame.input.KeyInputController;
 import bwyap.gridgame.input.KeyInputInterface;
 import bwyap.gridgame.render.CanvasGameWindow;
+import bwyap.gridgame.render.CanvasInterface;
 
 /**
  * A Game window for GridGame.
@@ -47,6 +48,14 @@ public class GridGameWindow extends CanvasGameWindow {
 	 */
 	public KeyInputInterface getKeyInputInterface() {
 		return input;
+	}
+	
+	/**
+	 * Get the canvas on which the game is rendered
+	 * @return
+	 */
+	public CanvasInterface getCanvas() {
+		return canvas;
 	}
 	
 	@Override

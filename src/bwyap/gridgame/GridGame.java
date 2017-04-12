@@ -11,7 +11,7 @@ import bwyap.gridgame.input.KeyInputController;
  */
 public class GridGame {
 	
-	private static final int FPS_RATE = 30;
+	private static final int FPS_RATE = 60;
 	
 	protected KeyInputController input;
 	protected GridGameWindow window;
@@ -22,8 +22,29 @@ public class GridGame {
 	 * Create a new GridGame object and initialize game engine and game window. 
 	 */
 	public GridGame() {	
+		initInput();
+		initWindow();
+		initEngine();
+	}
+	
+	/**
+	 * Initialize the input controller
+	 */
+	protected void initInput() {
 		input = new KeyInputController();
+	}
+	
+	/**
+	 * Initialize the game window
+	 */
+	protected void initWindow() {
 		window = new GridGameWindow("Game Window");
+	}
+	
+	/**
+	 * Initialize the game engine
+	 */
+	protected void initEngine() {
 		engine = new GridGameEngine(FPS_RATE, window);
 		engineThread = new Thread(engine);
 	}

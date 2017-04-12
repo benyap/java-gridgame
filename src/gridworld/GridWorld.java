@@ -10,8 +10,12 @@ import bwyap.gridgame.GridGame;
  */
 public class GridWorld extends GridGame {
 	
-	public GridWorld() {
-		
+	public static final String TITLE = "Grid world";
+	
+	@Override
+	protected void initWindow() {
+		// Initialize a new GridWorldWindow (instead of default window)
+		window = new GridWorldWindow(TITLE);
 	}
 	
 }
