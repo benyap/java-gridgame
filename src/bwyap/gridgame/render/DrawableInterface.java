@@ -7,12 +7,25 @@ import java.awt.Graphics;
  * @author bwyap
  *
  */
-public interface Drawable {
+public interface DrawableInterface {
+	
+	/**
+	 * Get the id of the drawable
+	 * @return
+	 */
+	public String id();
 	
 	/**
 	 * Draw the component through Java's {@code Grahpics} API
 	 * @param g
 	 */
 	public void draw(Graphics g);
+	
+	
+	/**
+	 * Get the priority of of the drawable element
+	 * @return
+	 */
+	public int priority();
 	
 }
