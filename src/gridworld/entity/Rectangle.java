@@ -1,17 +1,17 @@
-package gridworld.drawable;
+package gridworld.entity;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
-import bwyap.gridgame.render.drawable.Drawable;
-import bwyap.gridgame.render.drawable.DrawableObject;
+import bwyap.gridgame.render.entity.DrawableEntity;
+import bwyap.gridgame.render.entity.DrawableEntityObject;
 
 /**
  * A rectangular shaped drawable object
  * @author bwyap
  *
  */
-public class Rectangle extends DrawableObject {
+public class Rectangle extends DrawableEntityObject {
 
 	public static final Color DEFAULT_COLOUR = Color.WHITE;
 
@@ -40,7 +40,7 @@ public class Rectangle extends DrawableObject {
 	 * @param h height
 	 */
 	public Rectangle(String id, float x, float y, float w, float h) {
-		this(id, Drawable.DEFAULT_PRIORITY, x, y, w, h);
+		this(id, DrawableEntity.DEFAULT_PRIORITY, x, y, w, h);
 	}
 	
 	/**
@@ -54,7 +54,13 @@ public class Rectangle extends DrawableObject {
 	@Override
 	public void draw(Graphics g) {
 		g.setColor(colour);
-		g.fillRect((int)x, (int)y, (int)width, (int)height);
+		g.fillRect((int)posX, (int)posY, (int)width, (int)height);
+	}
+
+	@Override
+	public void update(float timeElapsed) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -1,18 +1,18 @@
-package gridworld.drawable;
+package gridworld.entity;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 
-import bwyap.gridgame.render.drawable.Drawable;
+import bwyap.gridgame.render.entity.DrawableEntity;
 
 /**
  * A drawable text element
  * @author bwyap
  *
  */
-public class Text extends Drawable {
+public class Text extends DrawableEntity {
 	
 	public static final String DEFAULT_FONTNAME = "SansSerif";
 	public static final int DEFAULT_SIZE = 12;
@@ -49,7 +49,7 @@ public class Text extends Drawable {
 	 * @param y y position
 	 */
 	public Text(String id, String text, float x, float y) {
-		this(id, Drawable.DEFAULT_PRIORITY, text, x, y);
+		this(id, DrawableEntity.DEFAULT_PRIORITY, text, x, y);
 	}
 	
 	/**
@@ -100,7 +100,7 @@ public class Text extends Drawable {
 		if (updateRenderY) updateRenderY(g);
 		g.setFont(font);
 		g.setColor(colour);
-		g.drawString(text, (int)x, (int)renderY);
+		g.drawString(text, (int)posX, (int)renderY);
 	}	
 	
 	/**
@@ -109,7 +109,13 @@ public class Text extends Drawable {
 	 */
 	private void updateRenderY(Graphics g) {
 		FontMetrics metrics = g.getFontMetrics(font);		
-		renderY = y + metrics.getHeight() - metrics.getDescent();
+		renderY = posY + metrics.getHeight() - metrics.getDescent();
+	}
+
+	@Override
+	public void update(float timeElapsed) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

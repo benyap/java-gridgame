@@ -1,6 +1,6 @@
 package bwyap.gridgame.render;
 
-import bwyap.gridgame.render.drawable.DrawableInterface;
+import bwyap.gridgame.render.entity.DrawableInterface;
 
 /**
  * Interface for a canvas which can render Drawable items

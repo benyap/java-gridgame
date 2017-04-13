@@ -1,15 +1,15 @@
-package bwyap.gridgame.render.drawable;
+package bwyap.gridgame.render.entity;
 
 /**
- * An abstract for a drawable object with dimensions (width and height)
+ * An abstract class for a drawable entity with dimensions (width and height)
  * @author bwyap
  *
  */
-public abstract class DrawableObject extends Drawable {
+public abstract class DrawableEntityObject extends DrawableEntity {
 
 	protected float width, height;
 	
-	public DrawableObject(String id, int priority, float x, float y, float w, float h) {
+	public DrawableEntityObject(String id, int priority, float x, float y, float w, float h) {
 		super(id, priority, x, y);
 		this.width = w;
 		this.height = h;

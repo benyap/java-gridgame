@@ -3,8 +3,8 @@ package gridworld;
 import java.awt.Color;
 
 import bwyap.gridgame.GridGameWindow;
-import gridworld.drawable.Rectangle;
-import gridworld.drawable.Text;
+import gridworld.entity.Rectangle;
+import gridworld.entity.Text;
 
 /**
  * An extension of GridGameWindow which implements custom game functionality
