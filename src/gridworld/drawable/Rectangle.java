@@ -3,6 +3,9 @@ package gridworld.drawable;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import bwyap.gridgame.render.drawable.Drawable;
+import bwyap.gridgame.render.drawable.DrawableObject;
+
 /**
  * A rectangular shaped drawable object
  * @author bwyap

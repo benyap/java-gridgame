@@ -1,4 +1,4 @@
-package gridworld.drawable;
+package bwyap.gridgame.render.drawable;
 
 /**
  * An abstract for a drawable object with dimensions (width and height)

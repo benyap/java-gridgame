@@ -5,6 +5,8 @@ import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 
+import bwyap.gridgame.render.drawable.Drawable;
+
 /**
  * A drawable text element
  * @author bwyap

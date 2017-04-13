@@ -1,6 +1,4 @@
-package gridworld.drawable;
-
-import bwyap.gridgame.render.DrawableInterface;
+package bwyap.gridgame.render.drawable;
 
 /**
  * An abstract base class for a drawable element

@@ -1,4 +1,4 @@
-package bwyap.gridgame.render;
+package bwyap.gridgame.render.drawable;
 
 import java.awt.Graphics;
 
