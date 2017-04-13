@@ -1,4 +1,4 @@
-package gridworld.entity;
+package gridworld.entity.base;
 
 import java.awt.Color;
 import java.awt.Font;
