@@ -3,7 +3,8 @@ package gridworld;
 import java.awt.Color;
 
 import bwyap.gridgame.GridGameWindow;
-import gridworld.entity.base.Rectangle;
+import gridworld.entity.Orbiter;
+import gridworld.entity.RotationDirection;
 import gridworld.entity.base.Text;
 
 /**
@@ -15,9 +16,9 @@ public class GridWorldDemoWindow extends GridGameWindow {
 
 	private static final long serialVersionUID = -3347622854920719009L;
 	
-	private Rectangle s1; 
-	private Rectangle s2; 
-	private Rectangle s3; 
+	private Orbiter o1;
+	private Orbiter o2;
+	private Orbiter o3;
 	
 	/**
 	 * Create a GridWorldWindow and initialize the game state. <- TODO
@@ -28,43 +29,45 @@ public class GridWorldDemoWindow extends GridGameWindow {
 		test();
 	}
 	
-	/*
-	 * TODO TESTING ONLY
-	 */
 	public void test() {
+		// Create some text elements
 		Text t1 = new Text("Title1", "Hello world!", 0, 0);
 		t1.setSize(60);
-		
+		getCanvas().addDrawable(t1);
+
 		Text t2 = new Text("Title2", "The quick brown fox jumps over the lazy dog", 5, 70);
 		t2.setSize(14);
-		
-		getCanvas().addDrawable(t1);
 		getCanvas().addDrawable(t2);
+
 		
-		s1 = new Rectangle("Square1", 100, 100, 30, 30);
-		s1.setColour(Color.RED);
-		getCanvas().addDrawable(s1);
+		// Create three orbiters
+		o1 = new Orbiter("o1", 150, 200, 30, 30);
+		o1.setColour(Color.RED);
+		o1.setRadius(100);
+		o1.setSpeed(500);
+		getCanvas().addDrawable(o1);
 		
-		s2 = new Rectangle("Square2", 100, 100, 30, 30);
-		s2.setColour(Color.GREEN);
-		getCanvas().addDrawable(s2);
+		o2 = new Orbiter("o2", 350, 200, 30, 30);
+		o2.setColour(Color.GREEN);
+		o2.setRadius(80);
+		o2.setSpeed(100);
+		o2.setDirection(RotationDirection.ANTICLOCKWISE);
+		getCanvas().addDrawable(o2);
 		
-		s3 = new Rectangle("Square3", 100, 100, 30, 30);
-		s3.setColour(Color.BLUE);
-		getCanvas().addDrawable(s3);
+		o3 = new Orbiter("o3", 650, 200, 30, 30);
+		o3.setColour(Color.BLUE);
+		o3.setRadius(120);
+		o3.setSpeedX(500);
+		o3.setSpeedY(300);
+		getCanvas().addDrawable(o3);
 	}
 	
-	float counter = 0;
 	@Override
 	public void update(float timeElapsed) {
-		
-		// TODO TESTING ONLY ====
-		counter += timeElapsed;
-		s1.setPosition(200 + (int)(80*Math.sin(counter/300)), 200 + (int)(80*Math.cos(counter/300)));
-		s2.setPosition(400 + (int)(90*Math.sin(counter/200)), 200 + (int)(90*Math.cos(counter/200)));
-		s3.setPosition(600 + (int)(70*Math.sin(counter/100)), 200 + (int)(-70*Math.sin(counter/100)));
-		// ======================
-		
+		// update objects
+		o1.update(timeElapsed);
+		o2.update(timeElapsed);
+		o3.update(timeElapsed);
 	}
 	
 }
