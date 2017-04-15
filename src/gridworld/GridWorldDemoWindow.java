@@ -4,11 +4,11 @@ import java.awt.Color;
 
 import bwyap.gridgame.GridGameWindow;
 import bwyap.gridgame.render.entity.Image;
+import bwyap.gridgame.render.entity.Orbiter;
 import bwyap.gridgame.render.entity.Rectangle;
+import bwyap.gridgame.render.entity.RotationDirection;
 import bwyap.gridgame.render.entity.Text;
 import bwyap.gridgame.res.ResourceLoader;
-import gridworld.entity.Orbiter;
-import gridworld.entity.RotationDirection;
 
 /**
  * An extension of GridGameWindow which implements custom game functionality

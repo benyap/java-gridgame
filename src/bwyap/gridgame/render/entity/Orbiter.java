@@ -1,4 +1,4 @@
-package gridworld.entity;
+package bwyap.gridgame.render.entity;
 
 import java.awt.Graphics;
 

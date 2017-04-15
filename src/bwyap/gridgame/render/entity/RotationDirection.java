@@ -1,4 +1,4 @@
-package gridworld.entity;
+package bwyap.gridgame.render.entity;
 
 /**
  * Specifies the direction of rotation for an orbit.
