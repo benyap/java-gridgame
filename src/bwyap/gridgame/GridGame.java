@@ -2,10 +2,11 @@ package bwyap.gridgame;
 
 import bwyap.gridgame.engine.GameEngineInterface;
 import bwyap.gridgame.input.KeyInputController;
+import gridworld.res.ResourceLoader;
 
 /**
  * A GridGame object holds all game components, 
- * such as the game engine, game window and input controller. 
+ * such as the game engine, game window, input controller and resources. 
  * @author bwyap
  *
  */
@@ -17,14 +18,25 @@ public class GridGame {
 	protected GridGameWindow window;
 	protected GameEngineInterface engine;
 	protected Thread engineThread;
+	protected ResourceLoader res;
 	
 	/**
 	 * Create a new GridGame object and initialize game engine and game window. 
 	 */
 	public GridGame() {	
+		initResource();
 		initInput();
 		initWindow();
 		initEngine();
+	}
+	
+	/**
+	 * Initialize the resource loader
+	 */
+	protected void initResource() {
+		res = new ResourceLoader();
+		res.init();
+		res.load();
 	}
 	
 	/**
