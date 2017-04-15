@@ -12,7 +12,7 @@ import bwyap.gridgame.res.ResourceLoader;
  */
 public class GridGame {
 	
-	private static final int FPS_RATE = 60;
+	private static final int FPS_RATE = 100;
 	
 	protected KeyInputController input;
 	protected GridGameWindow window;
