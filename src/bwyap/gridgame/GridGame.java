@@ -23,7 +23,12 @@ public class GridGame {
 	/**
 	 * Create a new GridGame object and initialize game engine and game window. 
 	 */
-	public GridGame() {	
+	public GridGame() {	}
+	
+	/**
+	 * Initialize the game components
+	 */
+	public void init() {
 		initResource();
 		initInput();
 		initWindow();
@@ -68,7 +73,7 @@ public class GridGame {
 	 * Start the game engine and show the game window.
 	 */
 	public void start() {
-		window.addKeyListener(input);
+		init();
 		window.setVisible(true);
 		engineThread.start();
 	}
