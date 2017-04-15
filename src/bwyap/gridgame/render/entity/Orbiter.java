@@ -3,14 +3,13 @@ package bwyap.gridgame.render.entity;
 import java.awt.Graphics;
 
 import bwyap.gridgame.render.entity.base.DrawableEntity;
-import bwyap.gridgame.render.entity.base.DrawableInterface;
 
 /**
  * A class which holds an entity and orbits it around a point
  * @author bwyap
  *
  */
-public class Orbiter extends DrawableEntity implements DrawableInterface {
+public class Orbiter extends DrawableEntity {
 	
 	private RotationDirection  direction = RotationDirection.CLOCKWISE;
 	private float counter = 0;
