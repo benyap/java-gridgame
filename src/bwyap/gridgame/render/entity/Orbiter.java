@@ -1,7 +1,5 @@
 package bwyap.gridgame.render.entity;
 
-import java.awt.Graphics;
-
 import bwyap.gridgame.render.entity.base.DrawableEntity;
 
 /**
@@ -9,7 +7,7 @@ import bwyap.gridgame.render.entity.base.DrawableEntity;
  * @author bwyap
  *
  */
-public class Orbiter extends DrawableEntity {
+public class Orbiter extends DrawableEntityHolder {
 	
 	private RotationDirection  direction = RotationDirection.CLOCKWISE;
 	private float counter = 0;
@@ -17,16 +15,13 @@ public class Orbiter extends DrawableEntity {
 	private float radiusX = 100, radiusY = 100;
 	private float speedX = 100, speedY = 100;
 	
-	private DrawableEntity entity;
-	
 	/**
 	 * Create a new orbiter centered at x and y with a default radius and speed
 	 */
 	public Orbiter(DrawableEntity e) {
-		super(e.id(), e.priority(), e.getPosX(), e.getPosY());
+		super(e);
 		this.centerX = e.getPosX();
 		this.centerY = e.getPosY();
-		this.entity = e;
 	}
 	
 	/**
@@ -107,11 +102,6 @@ public class Orbiter extends DrawableEntity {
 		entity.setPosition(
 				centerX + (int)(radiusX*direction.dirX*Math.sin(counter/speedX)), 
 				centerY + (int)(radiusY*direction.dirY*Math.cos(counter/speedY)));
-	}
-
-	@Override
-	public void draw(Graphics g) {
-		entity.draw(g);
 	}
 
 }
