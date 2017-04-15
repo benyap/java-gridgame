@@ -1,10 +1,10 @@
-package gridworld.entity.base;
+package bwyap.gridgame.render.entity;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
-import bwyap.gridgame.render.entity.DrawableEntity;
-import bwyap.gridgame.render.entity.DrawableEntityObject;
+import bwyap.gridgame.render.entity.base.DrawableEntity;
+import bwyap.gridgame.render.entity.base.DrawableEntityObject;
 
 /**
  * A rectangular shaped drawable object

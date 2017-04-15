@@ -3,12 +3,12 @@ package gridworld;
 import java.awt.Color;
 
 import bwyap.gridgame.GridGameWindow;
+import bwyap.gridgame.render.entity.Image;
+import bwyap.gridgame.render.entity.Rectangle;
+import bwyap.gridgame.render.entity.Text;
+import bwyap.gridgame.res.ResourceLoader;
 import gridworld.entity.Orbiter;
 import gridworld.entity.RotationDirection;
-import gridworld.entity.base.Image;
-import gridworld.entity.base.Rectangle;
-import gridworld.entity.base.Text;
-import gridworld.res.ResourceLoader;
 
 /**
  * An extension of GridGameWindow which implements custom game functionality
@@ -72,6 +72,7 @@ public class GridWorldDemoWindow extends GridGameWindow {
 		o4 = new Orbiter(i);
 		o4.setSpeed(300);
 		getCanvas().addDrawable(o4);
+		
 	}
 	
 	@Override

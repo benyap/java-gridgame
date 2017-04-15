@@ -1,4 +1,4 @@
-package bwyap.gridgame.render.entity;
+package bwyap.gridgame.render.entity.base;
 
 /**
  * An abstract base class for a drawable element

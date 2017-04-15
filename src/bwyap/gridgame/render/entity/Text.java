@@ -1,11 +1,11 @@
-package gridworld.entity.base;
+package bwyap.gridgame.render.entity;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
 
-import bwyap.gridgame.render.entity.DrawableEntity;
+import bwyap.gridgame.render.entity.base.DrawableEntity;
 
 /**
  * A drawable text element

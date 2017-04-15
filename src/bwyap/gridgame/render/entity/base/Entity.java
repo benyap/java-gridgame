@@ -1,4 +1,4 @@
-package bwyap.gridgame.render.entity;
+package bwyap.gridgame.render.entity.base;
 
 /**
  * An updatable entity with a position (x and y)

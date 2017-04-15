@@ -1,4 +1,4 @@
-package gridworld.res;
+package bwyap.gridgame.res;
 
 /**
  * A resource used by the game engine

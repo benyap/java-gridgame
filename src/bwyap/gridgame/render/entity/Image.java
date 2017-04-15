@@ -1,9 +1,9 @@
-package gridworld.entity.base;
+package bwyap.gridgame.render.entity;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import bwyap.gridgame.render.entity.DrawableEntityObject;
+import bwyap.gridgame.render.entity.base.DrawableEntityObject;
 
 /**
  * A bufferred image that can be drawn to the canvas as an entity object

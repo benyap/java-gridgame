@@ -1,4 +1,4 @@
-package bwyap.gridgame.render.entity;
+package bwyap.gridgame.render.entity.base;
 
 /**
  * An abstract class for a drawable entity with dimensions (width and height)

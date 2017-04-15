@@ -2,7 +2,7 @@ package bwyap.gridgame;
 
 import bwyap.gridgame.engine.GameEngineInterface;
 import bwyap.gridgame.input.KeyInputController;
-import gridworld.res.ResourceLoader;
+import bwyap.gridgame.res.ResourceLoader;
 
 /**
  * A GridGame object holds all game components, 

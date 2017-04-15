@@ -1,4 +1,4 @@
-package gridworld.res;
+package bwyap.gridgame.res;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;

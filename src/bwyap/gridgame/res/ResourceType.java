@@ -1,4 +1,4 @@
-package gridworld.res;
+package bwyap.gridgame.res;
 
 /**
  * Supported resource types

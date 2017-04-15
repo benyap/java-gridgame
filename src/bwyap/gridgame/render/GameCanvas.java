@@ -12,7 +12,7 @@ import java.util.Map;
 
 import javax.swing.JPanel;
 
-import bwyap.gridgame.render.entity.DrawableInterface;
+import bwyap.gridgame.render.entity.base.DrawableInterface;
 
 /**
  * A GameCanvas is an extension of a Swing JPanel used to render game graphics.

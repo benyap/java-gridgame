@@ -2,8 +2,8 @@ package gridworld.entity;
 
 import java.awt.Graphics;
 
-import bwyap.gridgame.render.entity.DrawableEntity;
-import bwyap.gridgame.render.entity.DrawableInterface;
+import bwyap.gridgame.render.entity.base.DrawableEntity;
+import bwyap.gridgame.render.entity.base.DrawableInterface;
 
 /**
  * A class which holds an entity and orbits it around a point
