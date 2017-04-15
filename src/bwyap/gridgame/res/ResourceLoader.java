@@ -13,9 +13,9 @@ import javax.imageio.ImageIO;
  */
 public class ResourceLoader {
 	
-	private HashMap<String, Resource> resources;
+	protected HashMap<String, Resource> resources = new HashMap<String, Resource>();
 	
-	private static HashMap<String, BufferedImage> images;
+	private static HashMap<String, BufferedImage> images = new HashMap<String, BufferedImage>();	
 	
 	/**
 	 * Get an image from the resource loader
@@ -27,17 +27,11 @@ public class ResourceLoader {
 	}
 	
 	/**
-	 * Initialize resource loader
+	 * Initialize resource loader.
+	 * This method should be overridden to load custom resources.
 	 */
 	public void init() {
-		images = new HashMap<String, BufferedImage>();
 		
-		resources = new HashMap<String, Resource>();
-		
-		// Add resources to the list
-		resources.put("ball", new Resource("ball", "/gridworld/res/temp/Ball.png", ResourceType.PNG));
-		// TODO
-		//
 	}
 	
 	/**
@@ -60,7 +54,7 @@ public class ResourceLoader {
 	 * @param id
 	 * @param location
 	 */
-	private void loadImage(String id, String location) {
+	protected void loadImage(String id, String location) {
 		try {
 			BufferedImage bg = ImageIO.read(getClass().getResource(location));
 		    images.put(id, bg);

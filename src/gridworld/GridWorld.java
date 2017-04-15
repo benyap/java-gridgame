@@ -1,6 +1,7 @@
 package gridworld;
 
 import bwyap.gridgame.GridGame;
+import gridworld.res.GridWorldResources;
 
 /**
  * This is the class that is run by the Driver class.
@@ -12,6 +13,14 @@ import bwyap.gridgame.GridGame;
 public class GridWorld extends GridGame {
 	
 	public static final String TITLE = "Grid world";
+	
+	@Override
+	protected void initResource() {
+		// Initialize custom GridWorld resources
+		res = new GridWorldResources();
+		res.init();
+		res.load();
+	}
 	
 	@Override
 	protected void initWindow() {
