@@ -77,6 +77,8 @@ public class GridWorldDemoWindow extends GridGameWindow {
 		o4.setSpeed(300);
 		getCanvas().addDrawable(o4);
 		
+		
+		// Create a move that responds to keyboard input
 		Image i2 = new Image("i2", 400, 500, 50, 50, ResourceLoader.getImage("ball"));
 		m1 = new Mover(i2, input);
 		getCanvas().addDrawable(m1);
