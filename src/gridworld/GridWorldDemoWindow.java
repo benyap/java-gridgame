@@ -4,6 +4,7 @@ import java.awt.Color;
 
 import bwyap.gridgame.GridGameWindow;
 import bwyap.gridgame.render.entity.Image;
+import bwyap.gridgame.render.entity.Mover;
 import bwyap.gridgame.render.entity.Orbiter;
 import bwyap.gridgame.render.entity.Rectangle;
 import bwyap.gridgame.render.entity.RotationDirection;
@@ -23,6 +24,7 @@ public class GridWorldDemoWindow extends GridGameWindow {
 	private Orbiter o2;
 	private Orbiter o3;
 	private Orbiter o4;
+	private Mover m1;
 	
 	/**
 	 * Create a GridWorldWindow and initialize the game state. <- TODO
@@ -30,10 +32,12 @@ public class GridWorldDemoWindow extends GridGameWindow {
 	 */
 	public GridWorldDemoWindow(String title) {
 		super(title);
-		test();
 	}
 	
-	public void test() {
+	/**
+	 * Initialize test elements
+	 */
+	public void testInit() {
 		// Create some text elements
 		Text t1 = new Text("Title1", "Hello world!", 0, 0);
 		t1.setSize(60);
@@ -68,11 +72,14 @@ public class GridWorldDemoWindow extends GridGameWindow {
 		o3.setSpeedY(300);
 		getCanvas().addDrawable(o3);
 		
-		Image i = new Image("i1", 300, 400, 50, 50, ResourceLoader.getImage("ball"));
-		o4 = new Orbiter(i);
+		Image i1 = new Image("i1", 300, 400, 50, 50, ResourceLoader.getImage("ball"));
+		o4 = new Orbiter(i1);
 		o4.setSpeed(300);
 		getCanvas().addDrawable(o4);
 		
+		Image i2 = new Image("i2", 400, 500, 50, 50, ResourceLoader.getImage("ball"));
+		m1 = new Mover(i2, input);
+		getCanvas().addDrawable(m1);
 	}
 	
 	@Override
@@ -82,6 +89,7 @@ public class GridWorldDemoWindow extends GridGameWindow {
 		o2.update(timeElapsed);
 		o3.update(timeElapsed);
 		o4.update(timeElapsed);
+		m1.update(timeElapsed);
 	}
 	
 }

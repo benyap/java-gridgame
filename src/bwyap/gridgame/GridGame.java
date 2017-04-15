@@ -51,6 +51,7 @@ public class GridGame {
 	 */
 	protected void initWindow() {
 		window = new GridGameWindow("Game Window");
+		window.addKeyListener(input);
 	}
 	
 	/**

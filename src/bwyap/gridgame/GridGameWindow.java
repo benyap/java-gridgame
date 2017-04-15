@@ -18,7 +18,7 @@ public class GridGameWindow extends CanvasGameWindow {
 	private static final int HEIGHT = 600;
 	private static final int WIDTH = 800;
 		
-	private KeyInputInterface input;
+	protected KeyInputInterface input;
 	
 	/**
 	 * Create a new GameWindow for GridGame

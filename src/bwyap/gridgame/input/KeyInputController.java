@@ -12,12 +12,16 @@ import java.awt.event.KeyListener;
  */
 public class KeyInputController implements KeyInputInterface, KeyListener {
 	
-	private boolean[] keys = new boolean[65535];
+	private boolean[] keys;
+	private KeyMap keyMap;
 	
 	/**
 	 * Create a new key input controller
 	 */
-	public KeyInputController() { }
+	public KeyInputController() {
+		keys = new boolean[65535];
+		keyMap = new KeyMap();
+	}
 	
 	@Override
 	public boolean isKeyDown(int keycode) {
@@ -45,5 +49,18 @@ public class KeyInputController implements KeyInputInterface, KeyListener {
 	
 	@Override
 	public void keyTyped(KeyEvent e) { }
+	
+	/**
+	 * Set the key map used by the KeyInputController
+	 * @param keyMap
+	 */
+	public void setKeyMap(KeyMap keyMap) {
+		this.keyMap = keyMap;
+	}
+	
+	@Override
+	public KeyMap getKeyMap() {
+		return keyMap;
+	}
 	
 }

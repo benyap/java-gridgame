@@ -23,4 +23,9 @@ public interface KeyInputInterface {
 	 */
 	public boolean getKeyPress(int keycode);
 	
+	/** 
+	 * Return the key map used by the KeyInputController
+	 */
+	public KeyMap getKeyMap();
+	
 }
