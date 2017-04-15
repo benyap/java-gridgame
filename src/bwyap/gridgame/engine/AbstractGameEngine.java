@@ -7,7 +7,7 @@ package bwyap.gridgame.engine;
  * @author bwyap
  *
  */
-public abstract class GameEngine implements GameEngineInterface {
+public abstract class AbstractGameEngine implements GameEngineInterface {
 	
 	protected boolean running;
 	
@@ -18,7 +18,7 @@ public abstract class GameEngine implements GameEngineInterface {
 	 * Create a game engine with the desired target fps
 	 * @param fps
 	 */
-	public GameEngine(float fps) {
+	public AbstractGameEngine(float fps) {
 		this.fps = fps;
 		this.running = false;
 	}

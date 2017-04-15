@@ -7,7 +7,7 @@ package bwyap.gridgame.engine;
  * @author bwyap
  *
  */
-public abstract class FixedTimeStepGameEngine extends GameEngine {
+public abstract class FixedTimeStepGameEngine extends AbstractGameEngine {
 	
 	private final float MS_PER_SEC = 1000;
 	private final float MS_PER_TICK;
