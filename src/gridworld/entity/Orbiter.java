@@ -1,13 +1,16 @@
 package gridworld.entity;
 
-import gridworld.entity.base.Rectangle;
+import java.awt.Graphics;
+
+import bwyap.gridgame.render.entity.DrawableEntity;
+import bwyap.gridgame.render.entity.DrawableInterface;
 
 /**
- * A rectangle entity that orbits around a specified point
+ * A class which holds an entity and orbits it around a point
  * @author bwyap
  *
  */
-public class Orbiter extends Rectangle {
+public class Orbiter extends DrawableEntity implements DrawableInterface {
 	
 	private RotationDirection  direction = RotationDirection.CLOCKWISE;
 	private float counter = 0;
@@ -15,20 +18,16 @@ public class Orbiter extends Rectangle {
 	private float radiusX = 100, radiusY = 100;
 	private float speedX = 100, speedY = 100;
 	
-	/**
-	 * Create a new orbiter centered at x and y with a default radius and speed
-	 */
-	public Orbiter(String id, int priority, float x, float y, float w, float h) {
-		super(id, priority, x, y, w, h);
-		this.centerX = x;
-		this.centerY = y;
-	}
+	private DrawableEntity entity;
 	
 	/**
 	 * Create a new orbiter centered at x and y with a default radius and speed
 	 */
-	public Orbiter(String id, float x, float y, float w, float h) {
-		this(id, DEFAULT_PRIORITY, x, y, w, h);
+	public Orbiter(DrawableEntity e) {
+		super(e.id(), e.priority(), e.getPosX(), e.getPosY());
+		this.centerX = e.getPosX();
+		this.centerY = e.getPosY();
+		this.entity = e;
 	}
 	
 	/**
@@ -106,9 +105,14 @@ public class Orbiter extends Rectangle {
 		counter += timeElapsed;
 		
 		// use sin and cos to achieve rotation based on counter
-		setPosition(
+		entity.setPosition(
 				centerX + (int)(radiusX*direction.dirX*Math.sin(counter/speedX)), 
 				centerY + (int)(radiusY*direction.dirY*Math.cos(counter/speedY)));
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		entity.draw(g);
 	}
 
 }

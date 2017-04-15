@@ -5,7 +5,10 @@ import java.awt.Color;
 import bwyap.gridgame.GridGameWindow;
 import gridworld.entity.Orbiter;
 import gridworld.entity.RotationDirection;
+import gridworld.entity.base.Image;
+import gridworld.entity.base.Rectangle;
 import gridworld.entity.base.Text;
+import gridworld.res.ResourceLoader;
 
 /**
  * An extension of GridGameWindow which implements custom game functionality
@@ -19,6 +22,7 @@ public class GridWorldDemoWindow extends GridGameWindow {
 	private Orbiter o1;
 	private Orbiter o2;
 	private Orbiter o3;
+	private Orbiter o4;
 	
 	/**
 	 * Create a GridWorldWindow and initialize the game state. <- TODO
@@ -40,26 +44,34 @@ public class GridWorldDemoWindow extends GridGameWindow {
 		getCanvas().addDrawable(t2);
 
 		
-		// Create three orbiters
-		o1 = new Orbiter("o1", 150, 200, 30, 30);
-		o1.setColour(Color.RED);
+		// Create orbiters
+		Rectangle r = new Rectangle("r1", 150, 200, 30, 30);
+		r.setColour(Color.RED);
+		o1 = new Orbiter(r);
 		o1.setRadius(100);
 		o1.setSpeed(500);
 		getCanvas().addDrawable(o1);
 		
-		o2 = new Orbiter("o2", 350, 200, 30, 30);
-		o2.setColour(Color.GREEN);
+		r = new Rectangle("r2", 350, 200, 30, 30);
+		r.setColour(Color.GREEN);
+		o2 = new Orbiter(r);
 		o2.setRadius(80);
 		o2.setSpeed(100);
 		o2.setDirection(RotationDirection.ANTICLOCKWISE);
 		getCanvas().addDrawable(o2);
 		
-		o3 = new Orbiter("o3", 650, 200, 30, 30);
-		o3.setColour(Color.BLUE);
+		r = new Rectangle("r3", 550, 200, 30, 30);
+		r.setColour(Color.BLUE);
+		o3 = new Orbiter(r);
 		o3.setRadius(120);
 		o3.setSpeedX(500);
 		o3.setSpeedY(300);
 		getCanvas().addDrawable(o3);
+		
+		Image i = new Image("i1", 300, 400, 50, 50, ResourceLoader.getImage("ball"));
+		o4 = new Orbiter(i);
+		o4.setSpeed(300);
+		getCanvas().addDrawable(o4);
 	}
 	
 	@Override
@@ -68,6 +80,7 @@ public class GridWorldDemoWindow extends GridGameWindow {
 		o1.update(timeElapsed);
 		o2.update(timeElapsed);
 		o3.update(timeElapsed);
+		o4.update(timeElapsed);
 	}
 	
 }
