@@ -24,9 +24,11 @@ public class GridWorld extends GridGame {
 	
 	@Override
 	protected void initWindow() {
-		// Initialize a new GridWorldWindow (instead of default window)
+		// Initialize a new GridWorldDemoWindow (instead of default window)
 		window = new GridWorldDemoWindow(TITLE);
 		window.addKeyListener(input);
+		
+		// initialize demo components
 		((GridWorldDemoWindow)window).testInit();
 	}
 	
