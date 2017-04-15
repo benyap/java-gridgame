@@ -4,7 +4,7 @@ import java.awt.Color;
 
 import bwyap.gridgame.GridGameWindow;
 import bwyap.gridgame.render.entity.Ellipse;
-import bwyap.gridgame.render.entity.GridGameImage;
+import bwyap.gridgame.render.entity.DrawableImage;
 import bwyap.gridgame.render.entity.Mover;
 import bwyap.gridgame.render.entity.Orbiter;
 import bwyap.gridgame.render.entity.Rectangle;
@@ -74,14 +74,14 @@ public class GridWorldDemoWindow extends GridGameWindow {
 		o3.setSpeedY(300);
 		getCanvas().addDrawable(o3);
 		
-		GridGameImage i1 = new GridGameImage("i1", 300, 400, 50, 50, ResourceLoader.getImage("ball"));
+		DrawableImage i1 = new DrawableImage("i1", 300, 400, 50, 50, ResourceLoader.getImage("ball"));
 		o4 = new Orbiter(i1);
 		o4.setSpeed(300);
 		getCanvas().addDrawable(o4);
 		
 		
 		// Create a move that responds to keyboard input
-		GridGameImage i2 = new GridGameImage("i2", 1, 400, 500, 50, 50, ResourceLoader.getImage("ball"));
+		DrawableImage i2 = new DrawableImage("i2", 1, 400, 500, 50, 50, ResourceLoader.getImage("ball"));
 		m1 = new Mover(i2, input);
 		getCanvas().addDrawable(m1);
 	}
