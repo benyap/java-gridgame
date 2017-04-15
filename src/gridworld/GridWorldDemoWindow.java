@@ -13,7 +13,8 @@ import bwyap.gridgame.render.entity.Text;
 import bwyap.gridgame.res.ResourceLoader;
 
 /**
- * An extension of GridGameWindow which implements custom game functionality
+ * An extension of GridGameWindow which implements custom game functionality.
+ * Demo of GridGame components
  * @author bwyap
  *
  */
@@ -88,10 +89,10 @@ public class GridWorldDemoWindow extends GridGameWindow {
 	@Override
 	public void update(float timeElapsed) {
 		// update objects
-		//o1.update(timeElapsed);
-		//o2.update(timeElapsed);
-		//o3.update(timeElapsed);
-		//o4.update(timeElapsed);
+		o1.update(timeElapsed);
+		o2.update(timeElapsed);
+		o3.update(timeElapsed);
+		o4.update(timeElapsed);
 		m1.update(timeElapsed);
 	}
 	
