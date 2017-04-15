@@ -31,7 +31,7 @@ public class GridGame {
 	}
 	
 	/**
-	 * Initialize the resource loader
+	 * Initialize the resource loader and load resources.
 	 */
 	protected void initResource() {
 		res = new ResourceLoader();
@@ -40,14 +40,15 @@ public class GridGame {
 	}
 	
 	/**
-	 * Initialize the input controller
+	 * Initialize the input controller.
 	 */
 	protected void initInput() {
 		input = new KeyInputController();
 	}
 	
 	/**
-	 * Initialize the game window
+	 * Initialize the game window.
+	 * This should be done after the input controller has been initialised.
 	 */
 	protected void initWindow() {
 		window = new GridGameWindow("Game Window");
@@ -55,7 +56,8 @@ public class GridGame {
 	}
 	
 	/**
-	 * Initialize the game engine
+	 * Initialize the game engine.
+	 * This should be done after the window has been initialized.
 	 */
 	protected void initEngine() {
 		engine = new GridGameEngine(FPS_RATE, window);
@@ -63,7 +65,7 @@ public class GridGame {
 	}
 	
 	/**
-	 * Start the game engine and show the game window
+	 * Start the game engine and show the game window.
 	 */
 	public void start() {
 		window.addKeyListener(input);
