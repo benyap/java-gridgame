@@ -80,7 +80,7 @@ public class GridWorldDemoWindow extends GridGameWindow {
 		
 		
 		// Create a move that responds to keyboard input
-		GridGameImage i2 = new GridGameImage("i2", 400, 500, 50, 50, ResourceLoader.getImage("ball"));
+		GridGameImage i2 = new GridGameImage("i2", 1, 400, 500, 50, 50, ResourceLoader.getImage("ball"));
 		m1 = new Mover(i2, input);
 		getCanvas().addDrawable(m1);
 	}
@@ -88,10 +88,10 @@ public class GridWorldDemoWindow extends GridGameWindow {
 	@Override
 	public void update(float timeElapsed) {
 		// update objects
-		o1.update(timeElapsed);
-		o2.update(timeElapsed);
-		o3.update(timeElapsed);
-		o4.update(timeElapsed);
+		//o1.update(timeElapsed);
+		//o2.update(timeElapsed);
+		//o3.update(timeElapsed);
+		//o4.update(timeElapsed);
 		m1.update(timeElapsed);
 	}
 	

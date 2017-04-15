@@ -53,7 +53,7 @@ public class GameCanvas extends JPanel implements CanvasInterface {
 			Map<String, DrawableInterface> map = new HashMap<String, DrawableInterface>();
 			drawables.put(item.priority(), map);
 			priorities.add(item.priority());
-			Collections.sort(priorities);
+			Collections.sort(priorities, Collections.reverseOrder());
 		}
 		
 		// add the drawable

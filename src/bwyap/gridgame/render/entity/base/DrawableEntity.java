@@ -7,7 +7,7 @@ package bwyap.gridgame.render.entity.base;
  */
 public abstract class DrawableEntity extends Entity implements DrawableInterface {
 	
-	public static final int DEFAULT_PRIORITY = 1;
+	public static final int DEFAULT_PRIORITY = 100;
 	
 	private String id;
 	private int priority;
