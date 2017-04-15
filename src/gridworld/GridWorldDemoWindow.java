@@ -3,6 +3,7 @@ package gridworld;
 import java.awt.Color;
 
 import bwyap.gridgame.GridGameWindow;
+import bwyap.gridgame.render.entity.Ellipse;
 import bwyap.gridgame.render.entity.GridGameImage;
 import bwyap.gridgame.render.entity.Mover;
 import bwyap.gridgame.render.entity.Orbiter;
@@ -56,9 +57,9 @@ public class GridWorldDemoWindow extends GridGameWindow {
 		o1.setSpeed(500);
 		getCanvas().addDrawable(o1);
 		
-		r = new Rectangle("r2", 350, 200, 30, 30);
-		r.setColour(Color.GREEN);
-		o2 = new Orbiter(r);
+		Ellipse e = new Ellipse("r2", 350, 200, 30, 40);
+		e.setColour(Color.GREEN);
+		o2 = new Orbiter(e);
 		o2.setRadius(80);
 		o2.setSpeed(100);
 		o2.setDirection(RotationDirection.ANTICLOCKWISE);
