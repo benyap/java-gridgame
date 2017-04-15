@@ -10,7 +10,7 @@ import bwyap.gridgame.render.entity.base.DrawableEntityObject;
  * @author bwyap
  *
  */
-public class Image extends DrawableEntityObject {
+public class GridGameImage extends DrawableEntityObject {
 
 	private BufferedImage image;
 	
@@ -24,7 +24,7 @@ public class Image extends DrawableEntityObject {
 	 * @param h
 	 * @param image the image to be drawn
 	 */
-	public Image(String id, int priority, float x, float y, float w, float h, BufferedImage image) {
+	public GridGameImage(String id, int priority, float x, float y, float w, float h, BufferedImage image) {
 		super(id, priority, x, y, w, h);
 		this.image = image;
 	}
@@ -38,7 +38,7 @@ public class Image extends DrawableEntityObject {
 	 * @param h
 	 * @param image the image to be drawn
 	 */
-	public Image(String id, float x, float y, float w, float h, BufferedImage image) {
+	public GridGameImage(String id, float x, float y, float w, float h, BufferedImage image) {
 		this(id, DEFAULT_PRIORITY, x, y, w, h, image);
 	}
 
